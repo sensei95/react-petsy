@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    * {
+        @apply m-0 p-0 box-border;
+    }
+
+    html, body {
+        @apply min-h-screen;
+    }
+
+    .wrapper {
+        @apply px-7 mx-auto lg:w-10/12;
+    }
+}
+
+/*---- Header ----*/
+.header {
+    /*@apply border-b h-16;*/
+}
+
+.header__logo {
+    @apply h-10 w-10;
+}
+
+.header__logo * {
+    @apply h-full w-full;
+}
+
+.header__logo-img {
+    @apply object-center object-cover;
+}
+
+.header__wrapper {
+    @apply flex items-center justify-between h-full;
+}
+
+.header__nav {
+    @apply transition-all duration-300 ease-in-out opacity-0 absolute inset-0 bg-white hidden flex-col items-center justify-center lg:static lg:opacity-100 lg:flex lg:flex-row lg:inset-auto;
+}
+
+.header__nav--show {
+    @apply flex opacity-100;
+}
+
+.header__hamburger {
+    @apply transition-colors duration-300 text-4xl cursor-pointer flex items-center justify-center rounded-md hover:border lg:hidden;
+}
+
+.nav__close {
+    @apply absolute top-6 right-6 cursor-pointer transition-all duration-300 text-4xl cursor-pointer flex items-center justify-center rounded-full hover:border border-slate-400 lg:hidden;
+}
+
+.nav__menu {
+    @apply flex flex-col w-3/4 divide-y divide-slate-300 lg:flex-row lg:w-auto lg:divide-y-0;
+}
+
+
+.nav__menu .menu__item {
+    @apply py-4;
+}
+
+.menu {
+    @apply lg:gap-x-6;
+}
+
+.menu__item {
+    @apply bg-slate-800;
+}
+
+.menu__link {
+    @apply w-full flex items-center lg:gap-x-3 lg:hover:border lg:hover:px-2 lg:hover:py-1;
+}
+
+.menu__link-icon {
+    @apply flex items-center text-2xl lg:text-lg;
+}
+
+.menu__link-text {
+    @apply flex-1 text-center text-lg lg:text-base;
+}
